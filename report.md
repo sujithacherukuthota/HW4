@@ -20,22 +20,6 @@ is mutiple line graph. I created both graphs to understand crealy. Line
 graph actually shows the change in time period I think this line graph
 is beat choice for this question to show the time period change.
 
-'''
-# Plotting
-
-plt.figure(figsize=(12, 6))
-sns.lineplot(x=average_age_first_birth.index,
-y=average_age_first_birth.values, marker=‘o’, label=‘Average Age at
-First Childbirth’) for age_group in total_births_by_age_group.index:
-sns.lineplot(x=total_births_by_age_group.columns,
-y=total_births_by_age_group.loc\[age_group\], marker=‘o’, label=f’Total
-{age_group}’)
-
-plt.xlabel(‘Year’) plt.ylabel(‘Count’) plt.title(‘Comparison of Average
-Age at First Childbirth and Total Births by Age Group (1990-2008)’)
-plt.legend(title=‘Age Group’) plt.grid(True) plt.show()
-
-'''
 
 **1st Graph**
 
@@ -66,21 +50,6 @@ Here I am using different colours to represent Average age at first
 child, Average age and Total number of women with childbirth to
 understand clearly.
 
-'''
-**Plotting the comparison**
-plt.figure(figsize=(10, 6))
-plt.plot(data['Age of mother'], data['1990_First_Births'], marker='o', label='Average Age at First Childbirth', color='b')
-plt.bar(data['Age of mother'], data['1990_Total_Births'], alpha=0.5, label='Total Number of Women with Childbirth', color='orange')
-
-plt.axhline(y=average_age_first_birth, color='r', linestyle='--', label='Average Age (1990)')
-plt.xlabel('Age Group')
-plt.ylabel('Number of Women / Average Age')
-plt.title('Comparison of Average Age at First Childbirth and Total Number of Women with Childbirth (1990)')
-plt.xticks(rotation=45)
-plt.legend()
-plt.tight_layout()
-plt.show()
-'''
 Idiom: Multiple Line Chart / Mark: Line
 | Data: Attribute | Data: Attribute Type  | Encode: Channel | 
 | --- |---| --- |
